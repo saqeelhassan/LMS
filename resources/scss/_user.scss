@@ -1,0 +1,345 @@
+// Should you need to overwrite any of our SCSS code or need to add any custom code, We highly recommend that you add your code into this file, so whenever theme update is available and you update the theme, You will not lose your hard work :)
+
+// Note for dark mode:
+// Uncomment below code and change primary color code to set different primary(i.e. light color of your primary) color in dark mode only.
+
+/*User CSS*/
+
+// ----- Selected text: yellow highlight -----
+::selection {
+  background-color: #fef08a;
+  color: #1a1a1a;
+}
+::-moz-selection {
+  background-color: #fef08a;
+  color: #1a1a1a;
+}
+
+// ========== LMS: Better colors & visible hover states ==========
+
+// ----- Main navbar (navbar-light): clearer link color and visible hover -----
+.navbar-light .navbar-nav .nav-link {
+  color: var(--#{$prefix}gray-800) !important;
+  font-weight: 500;
+  padding: 0.5rem 0.85rem !important;
+  border-radius: $border-radius;
+  transition: color 0.2s ease, background-color 0.2s ease;
+  &:hover {
+    color: var(--#{$prefix}primary) !important;
+    background-color: rgba(var(--#{$prefix}primary-rgb), 0.1) !important;
+  }
+  &.active {
+    color: var(--#{$prefix}primary) !important;
+    background-color: rgba(var(--#{$prefix}primary-rgb), 0.08) !important;
+  }
+}
+
+// Top bar (light) nav links - e.g. top header strip
+.navbar-top.navbar-dark .nav-link,
+.navbar-top.bg-light .nav-link {
+  color: var(--#{$prefix}gray-700) !important;
+  transition: color 0.2s ease, background-color 0.2s ease;
+  border-radius: $border-radius;
+  &:hover {
+    color: var(--#{$prefix}primary) !important;
+    background-color: rgba(var(--#{$prefix}primary-rgb), 0.08) !important;
+  }
+}
+
+// ----- Buttons: stronger hover visibility -----
+.btn-primary {
+  transition: background-color 0.2s ease, transform 0.15s ease, box-shadow 0.2s ease;
+  &:hover {
+    filter: brightness(1.08);
+    box-shadow: 0 4px 12px rgba(var(--#{$prefix}primary-rgb), 0.35);
+  }
+}
+.btn-outline-danger:hover,
+.btn-outline-primary:hover {
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.12);
+}
+
+// ----- Sidebar (dark): visible hover background + brighter text -----
+.sidebar.navbar-dark .sidebar-content .navbar-nav .nav-link,
+.navbar.sidebar.navbar-dark .navbar-nav .nav-link {
+  color: rgba(255, 255, 255, 0.88) !important;
+  border-radius: $border-radius;
+  transition: color 0.2s ease, background-color 0.2s ease;
+  &:hover {
+    color: #fff !important;
+    background-color: rgba(255, 255, 255, 0.12) !important;
+  }
+  &.active {
+    color: #fff !important;
+    background-color: rgba(var(--#{$prefix}primary-rgb), 0.35) !important;
+  }
+}
+// Sidebar: expanded parent (e.g. "Users") - keep WHITE text on dark bg (theme uses primary = dark blue, invisible)
+.sidebar.navbar-dark .sidebar-content .navbar-nav > .nav-item > .nav-link[data-bs-toggle=collapse][aria-expanded=true] {
+  color: #fff !important;
+  background-color: rgba(255, 255, 255, 0.15) !important;
+}
+// Arrows next to "Users" when expanded - white so visible on dark
+.sidebar.navbar-dark .sidebar-content .nav-item [data-bs-toggle=collapse][aria-expanded=true]::before,
+.sidebar.navbar-dark .sidebar-content .nav-item [data-bs-toggle=collapse][aria-expanded=true]::after {
+  background: #fff !important;
+}
+// Sidebar collapse submenu links
+.sidebar.navbar-dark .nav.flex-column .nav-link:hover,
+.navbar.sidebar.navbar-dark .nav.flex-column .nav-link:hover {
+  color: #fff !important;
+  background-color: rgba(255, 255, 255, 0.1) !important;
+}
+
+// ----- Sidebar (light): Super Admin light sidebar -----
+.sidebar.sidebar-light,
+.sidebar.sidebar-light .sidebar-content {
+  background-color: #fff !important;
+  border-right: 1px solid rgba(0, 0, 0, 0.08);
+}
+// No line/divider under the logo in sidebar
+.sidebar.sidebar-light .navbar-brand,
+.sidebar.sidebar-light > .d-flex:first-child {
+  border-bottom: none !important;
+  box-shadow: none !important;
+}
+.sidebar.sidebar-light .sidebar-content .navbar-nav .nav-link,
+.sidebar.sidebar-light.navbar-light .navbar-nav .nav-link {
+  color: var(--#{$prefix}gray-800) !important;
+  border: none !important;
+  border-radius: $border-radius;
+  transition: color 0.2s ease, background-color 0.2s ease, border-color 0.2s ease;
+  &:hover {
+    color: var(--#{$prefix}primary) !important;
+    background-color: rgba(var(--#{$prefix}primary-rgb), 0.08) !important;
+  }
+  &.active {
+    color: var(--#{$prefix}gray-800) !important;
+    background-color: rgba(0, 0, 0, 0.06) !important;
+    border-left: 3px solid var(--#{$prefix}gray-600) !important;
+    margin-left: 0;
+    padding-left: calc(1rem - 3px);
+    i { color: var(--#{$prefix}gray-700) !important; }
+  }
+}
+.sidebar.sidebar-light .sidebar-content .navbar-nav > .nav-item > .nav-link[data-bs-toggle=collapse][aria-expanded=true] {
+  color: var(--#{$prefix}gray-800) !important;
+  background-color: rgba(0, 0, 0, 0.05) !important;
+  border-left: none !important;
+}
+.sidebar.sidebar-light .sidebar-content .nav-item [data-bs-toggle=collapse][aria-expanded=true]::before,
+.sidebar.sidebar-light .sidebar-content .nav-item [data-bs-toggle=collapse][aria-expanded=true]::after {
+  background: var(--#{$prefix}gray-600) !important;
+}
+.sidebar.sidebar-light .nav.flex-column .nav-link {
+  color: var(--#{$prefix}gray-800) !important;
+  border-left: none !important;
+}
+.sidebar.sidebar-light .nav.flex-column .nav-link:hover {
+  color: var(--#{$prefix}primary) !important;
+  background-color: rgba(var(--#{$prefix}primary-rgb), 0.08) !important;
+}
+.sidebar.sidebar-light .nav.flex-column .nav-link.active {
+  color: var(--#{$prefix}gray-800) !important;
+  background-color: rgba(0, 0, 0, 0.06) !important;
+  border-left: 3px solid var(--#{$prefix}gray-600) !important;
+  padding-left: calc(2.5rem - 3px);
+  i { color: var(--#{$prefix}gray-700) !important; }
+}
+.sidebar.sidebar-light .nav-link.text-secondary {
+  color: var(--#{$prefix}gray-600) !important;
+}
+
+// ----- Dashboard link only: dark blue hover (white text + icon), only on Dashboard row width -----
+.sidebar.sidebar-light .sidebar-dashboard-link:hover,
+.nav-link.sidebar-dashboard-link:hover,
+.list-group-item-light-sidebar.sidebar-dashboard-link:hover {
+  color: #fff !important;
+  background-color: var(--#{$prefix}primary) !important;
+  border-radius: $border-radius;
+  i {
+    color: #fff !important;
+  }
+}
+.sidebar-dashboard-link.active {
+  color: var(--#{$prefix}gray-800) !important;
+  background-color: rgba(0, 0, 0, 0.06) !important;
+  border-left-color: var(--#{$prefix}gray-600) !important;
+  i { color: var(--#{$prefix}gray-700) !important; }
+}
+.sidebar-dashboard-link.active:hover {
+  color: #fff !important;
+  background-color: var(--#{$prefix}primary) !important;
+  border-left-color: rgba(255, 255, 255, 0.4) !important;
+  i {
+    color: #fff !important;
+  }
+}
+
+// ----- Account sidebars (Instructor / Student): same light UI as Super Admin -----
+.sidebar-menu-light {
+  background-color: #fff !important;
+  border-color: rgba(0, 0, 0, 0.08) !important;
+}
+.list-group-item-light-sidebar {
+  background: transparent !important;
+  color: var(--#{$prefix}gray-800) !important;
+  border: 0 !important;
+  border-radius: $border-radius !important;
+  border-left: 3px solid transparent !important;
+  transition: color 0.2s ease, background-color 0.2s ease;
+  &:hover {
+    color: var(--#{$prefix}primary) !important;
+    background-color: rgba(var(--#{$prefix}primary-rgb), 0.08) !important;
+  }
+  &.active {
+    color: var(--#{$prefix}gray-800) !important;
+    background-color: rgba(0, 0, 0, 0.06) !important;
+    border-left-color: var(--#{$prefix}gray-600) !important;
+    i { color: var(--#{$prefix}gray-700) !important; }
+  }
+  &.text-danger:hover {
+    color: var(--#{$prefix}danger) !important;
+    background-color: rgba(var(--#{$prefix}danger-rgb), 0.08) !important;
+  }
+}
+
+// ----- Dropdown items: visible hover -----
+.dropdown-menu .dropdown-item {
+  transition: background-color 0.15s ease, color 0.15s ease;
+  &:hover {
+    background-color: rgba(var(--#{$prefix}primary-rgb), 0.12) !important;
+    color: var(--#{$prefix}primary) !important;
+  }
+}
+
+// ----- Table row hover: more visible -----
+.table-hover tbody tr:hover {
+  background-color: rgba(var(--#{$prefix}primary-rgb), 0.06) !important;
+}
+.table-dark-gray.table-hover tbody tr:hover {
+  background-color: rgba(255, 255, 255, 0.08) !important;
+}
+
+// ----- Card hover shadow (used on dashboard cards) -----
+.hover-shadow {
+  transition: box-shadow 0.25s ease, transform 0.2s ease;
+  &:hover {
+    box-shadow: 0 8px 24px rgba(1, 33, 105, 0.15) !important;
+  }
+}
+
+// ----- text-primary-hover: clearer default and visible hover -----
+a.text-primary-hover,
+button.text-primary-hover {
+  color: var(--#{$prefix}gray-700) !important;
+  text-decoration: none;
+  &:hover {
+    color: var(--#{$prefix}primary) !important;
+    text-decoration: underline;
+  }
+}
+.text-primary-hover a {
+  color: var(--#{$prefix}gray-600) !important;
+  transition: color 0.2s ease;
+  &:hover {
+    color: var(--#{$prefix}primary) !important;
+    text-decoration: underline;
+  }
+}
+.text-white.text-primary-hover a,
+.text-white a.text-primary-hover {
+  color: rgba(255, 255, 255, 0.9) !important;
+  &:hover {
+    color: #fff !important;
+    text-decoration: underline;
+  }
+}
+
+// [data-bs-theme="dark"] {
+//   --bs-primary: #19f032 !important;
+//   --bs-primary-rgb: 25, 240, 50 !important; 
+//   --bs-link-color:#19f032 !important;
+//   --bs-link-hover-color:#0c911c !important;
+//   --bs-link-color-rgb:25, 240, 50 !important;
+//   --bs-link-hover-color-rgb:12, 145, 28;
+//   --bs-nav-pills-link-active-bg: #19f032 !important;
+
+//   .navbar {
+//     --bs-navbar-hover-color: var(--#{$prefix}primary);
+//     --bs-navbar-active-color: var(--#{$prefix}primary);
+//     }
+    
+//     .navbar-dark {
+//       --bs-navbar-hover-color: var(--#{$prefix}primary) !important;
+//       --bs-navbar-active-color: var(--#{$prefix}primary) !important;
+//     }
+//     .nav{
+//       --bs-nav-link-hover-color: var(--#{$prefix}primary);
+//     }
+//     .dropdown-menu {
+//       --bs-dropdown-link-hover-color: var(--#{$prefix}primary) !important;
+//       --bs-dropdown-link-hover-bg: rgba(var(--#{$prefix}primary-rgb), 0.1) !important;
+//       --bs-dropdown-link-active-color: var(--#{$prefix}primary) !important;
+//       --bs-dropdown-link-active-bg: rgba(var(--#{$prefix}primary-rgb), 0.1) !important;
+//     }
+  
+//   .btn-primary {
+//     --bs-btn-bg: var(--#{$prefix}primary);
+//     --bs-btn-border-color: var(--#{$prefix}primary);
+//     --bs-btn-hover-bg: var(--#{$prefix}link-hover-color);
+//     --bs-btn-hover-border-color: var(--#{$prefix}link-hover-color);
+//     --bs-btn-active-bg: var(--#{$prefix}link-hover-color);
+//     --bs-btn-active-border-color: var(--#{$prefix}link-hover-color);
+//     --bs-btn-disabled-bg: var(--#{$prefix}primary);
+//   }
+//   .btn-link {
+//     --bs-btn-color: var(--#{$prefix}primary);
+//     --bs-link-color: var(--#{$prefix}primary);
+//     --bs-btn-hover-color: var(--#{$prefix}link-hover-color);
+//     --bs-btn-active-color: var(--#{$prefix}link-hover-color);
+//   }
+//   .btn-outline-primary {
+//     --bs-btn-color: var(--#{$prefix}primary);
+//     --bs-btn-border-color: var(--#{$prefix}primary);
+//     --bs-btn-hover-bg: var(--#{$prefix}primary);
+//     --bs-btn-hover-border-color: var(--#{$prefix}primary);
+//     --bs-btn-active-bg: var(--#{$prefix}primary);
+//     --bs-btn-active-border-color: var(--#{$prefix}primary);
+//     --bs-btn-disabled-color: var(--#{$prefix}primary);
+//     --bs-btn-disabled-border-color: var(--#{$prefix}primary);
+//   }
+//   .btn-primary-soft{
+//     color: var(--#{$prefix}primary);
+//     background-color: rgba(var(--#{$prefix}primary-rgb), 0.1);
+//     &:hover, &:focus{
+//       color: $white;
+//       background-color: var(--#{$prefix}primary) !important;
+//       border-color: var(--#{$prefix}primary) !important;
+//     }
+//   }
+//   .nav-pills {
+//     --bs-nav-pills-link-active-bg: var(--#{$prefix}primary);
+//   }
+//   .form-control:focus{
+//     border-color: var(--#{$prefix}primary);
+//   }
+//   .text-bg-primary{
+//     background-color: rgba(var(--#{$prefix}primary-rgb), 1) !important;
+//   }
+//   .form-check-input:checked {
+//     background-color: var(--#{$prefix}primary);
+//     border-color: var(--#{$prefix}primary);
+//   }
+//   .choices.is-focused .choices__inner{
+//     border-color: var(--#{$prefix}primary);
+//   }
+
+//   .btn-primary-shadow{
+//     background-color: var(--#{$prefix}primary);
+//     box-shadow: 0 0 0 10px rgba(var(--#{$prefix}primary-rgb), .4);
+//     &:hover ,&.active, &:focus{
+//       border-color: var(--#{$prefix}primary);
+//     }
+//   }
+// }

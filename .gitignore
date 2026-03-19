@@ -1,0 +1,37 @@
+# Laravel specific
+/vendor/
+/node_modules/
+/public/storage
+/storage/*.key
+/.env
+/.env.backup
+/.env.production
+/.env.local
+
+# Laravel logs and cache
+/storage/logs/*
+/bootstrap/cache/*
+/storage/framework/cache/*
+/storage/framework/sessions/*
+/storage/framework/views/*
+
+# IDE & OS files
+.idea/
+.vscode/
+*.swp
+*.swo
+*.bak
+*.tmp
+.DS_Store
+Thumbs.db
+
+# Composer & npm lock files (optional, depending on workflow)
+composer.lock
+package-lock.json
+yarn.lock
+
+# PHPUnit
+.phpunit.result.cache
+
+# Coverage reports
+coverage/

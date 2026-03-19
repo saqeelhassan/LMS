@@ -1,0 +1,225 @@
+/* =========================================
+   DSIMT Theme Colors
+   Primary: #221d55 | Accent: #fbaf38 | Gray: #434344
+   ========================================= */
+
+:root {
+  --dsimt-primary: #221d55;
+  --dsimt-accent: #fbaf38;
+  --dsimt-gray: #434344;
+}
+
+/* Topbar - primary background, white text */
+.main_header_area .topbar-wrap {
+  background-color: var(--dsimt-primary) !important;
+  color: #fff !important;
+}
+.main_header_area .topbar-wrap ul li,
+.main_header_area .topbar-wrap .t-address li,
+.main_header_area .topbar-wrap .t-social li a,
+.main_header_area .topbar-wrap .t-social li a i,
+.main_header_area .topbar-wrap .ct-search-link a,
+.main_header_area .topbar-wrap .ct-search-link a i {
+  color: #fff !important;
+}
+.main_header_area .topbar-wrap .t-social li a:hover {
+  color: var(--dsimt-accent) !important;
+}
+.main_header_area .topbar-wrap .t-social .btn {
+  font-weight: 600;
+  font-size: 0.85rem;
+  min-width: 80px;
+  text-align: center;
+  color: #fff !important;
+  border: none;
+}
+.main_header_area .topbar-wrap .t-social .btn:hover {
+  color: #fff !important;
+  opacity: 0.9;
+}
+
+/* Nav links - gray default, accent on hover/active */
+.header_menu .navbar.navbar-default .nav.navbar-nav li a {
+  color: var(--dsimt-gray) !important;
+}
+.header_menu .navbar.navbar-default .nav.navbar-nav li a:hover,
+.header_menu .navbar.navbar-default .nav.navbar-nav li:hover a,
+.header_menu .navbar.navbar-default .nav.navbar-nav li.active a,
+.header_menu .navbar.navbar-default.navbar-sticky-in .nav.navbar-nav li:hover > a,
+.header_menu .navbar.navbar-default.navbar-sticky-in .nav.navbar-nav li.active > a {
+  color: var(--dsimt-accent) !important;
+}
+
+/* Dropdown menu items */
+.header_menu .navbar.navbar-default .nav.navbar-nav li.submenu .dropdown-menu li a {
+  color: var(--dsimt-gray) !important;
+}
+.header_menu .navbar.navbar-default .nav.navbar-nav li.submenu .dropdown-menu li a:hover {
+  background: var(--dsimt-accent) !important;
+  color: #fff !important;
+}
+
+/* General ul li text */
+ul li,
+ol li {
+  color: var(--dsimt-gray) !important;
+}
+
+/* Links */
+a:hover, a:focus {
+  color: var(--dsimt-accent) !important;
+}
+
+/* Footer ul links - ft-lists only (keep social icons as-is) */
+footer .footer-upper .ft-lists ul li a {
+  color: var(--dsimt-gray) !important;
+}
+footer .footer-upper .ft-lists ul li a:hover {
+  color: var(--dsimt-accent) !important;
+}
+footer .footer-upper .ft-lists ul li {
+  color: var(--dsimt-gray) !important;
+}
+
+/* Headings - primary color */
+h1, h2, h3, h4, h5, h6 {
+  color: var(--dsimt-primary) !important;
+}
+h3 a, h4 a {
+  color: var(--dsimt-primary) !important;
+}
+
+/* Body background tint */
+body {
+  background-color: rgba(34, 29, 85, 0.05) !important;
+}
+
+/* Buttons and accents */
+.btn,
+.slide-btn .btn,
+.bg-primary {
+  background: var(--dsimt-accent) !important;
+  border-color: var(--dsimt-accent) !important;
+  color: #fff !important;
+}
+.btn:hover,
+.slide-btn .btn:hover {
+  background: var(--dsimt-primary) !important;
+  border-color: var(--dsimt-primary) !important;
+  color: #fff !important;
+}
+
+/* Mobile slicknav */
+.slicknav_nav a:hover {
+  color: var(--dsimt-accent) !important;
+}
+.slicknav_nav .submenu.slicknav_open {
+  background: var(--dsimt-primary) !important;
+}
+
+/* Border accents */
+.border-primary,
+a:after {
+  border-color: var(--dsimt-accent) !important;
+}
+
+/* =========================================
+   Banner Slider – Professional typography
+   All slides use same fixed sizes for consistency
+   ========================================= */
+.banner-main .h2-slider-list .slide-contain {
+  max-width: 820px;
+  padding: 2rem 1rem 2rem 0;
+  margin: 0;
+  font-size: 16px; /* reset inherit for consistency */
+}
+/* Home banner (banner-3): remove left gap – load last so it wins */
+.banner-main.banner-3 .container {
+  padding-left: 0 !important;
+}
+.banner-main.banner-3 .slide-contain {
+  margin-left: -75px !important;
+  margin-right: auto !important;
+}
+.banner-main .h2-slider-list .slide-contain .banner-headline {
+  font-size: 2.25rem !important; /* 36px – same on all slides */
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  line-height: 1.25;
+  margin: 0;
+  margin-top: 70px;
+  text-shadow: 0 2px 12px rgba(0,0,0,0.4);
+  color: #fff !important;
+}
+.banner-main .h2-slider-list .slide-contain .banner-subhead {
+  font-size: 1.35rem !important; /* 21.6px – same on all slides */
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  margin: 0;
+  color: var(--dsimt-accent) !important;
+  text-shadow: 0 1px 8px rgba(0,0,0,0.3);
+}
+.banner-main .h2-slider-list .slide-contain .banner-desc {
+  font-size: 1.05rem !important; /* ~17px – same on all slides */
+  font-weight: 400;
+  line-height: 1.6;
+  margin: 0;
+  opacity: 0.95;
+  color: rgba(255,255,255,0.95) !important;
+  text-shadow: 0 1px 6px rgba(0,0,0,0.35);
+  max-width: 640px;
+}
+.banner-main .h2-slider-list .slide-contain .slide-btn {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  gap: 0.75rem;
+  margin: 0;
+}
+.banner-main .h2-slider-list .slide-contain .slide-btn .btn {
+  padding: 0.75rem 1.75rem;
+  font-weight: 600;
+  font-size: 0.95rem;
+  letter-spacing: 0.03em;
+  border-radius: 4px;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+.banner-main .h2-slider-list .slide-contain .slide-btn .btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 14px rgba(0,0,0,0.25);
+}
+.banner-main .h2-slider-list .slide-contain .slide-btn .btn-outline-light {
+  border-width: 2px;
+  background: transparent !important;
+  color: #fff !important;
+  border-color: rgba(255,255,255,0.8) !important;
+}
+.banner-main .h2-slider-list .slide-contain .slide-btn .btn-outline-light:hover {
+  background: rgba(255,255,255,0.15) !important;
+  border-color: #fff !important;
+  color: #fff !important;
+}
+@media (max-width: 768px) {
+  .banner-main .h2-slider-list .slide-contain .banner-headline {
+    font-size: 1.75rem !important;
+  }
+  .banner-main .h2-slider-list .slide-contain .banner-subhead {
+    font-size: 1.15rem !important;
+  }
+  .banner-main .h2-slider-list .slide-contain .banner-desc {
+    font-size: 0.95rem !important;
+  }
+}
+@media (max-width: 576px) {
+  .banner-main .h2-slider-list .slide-contain .slide-btn {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .banner-main .h2-slider-list .slide-contain .slide-btn .btn {
+    width: 100%;
+    max-width: 260px;
+  }
+  .banner-main .h2-slider-list .slide-contain .banner-headline {
+    font-size: 1.5rem !important;
+  }
+}

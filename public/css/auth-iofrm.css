@@ -1,0 +1,36 @@
+/* Auth iofrm-style split layout - login/register */
+.form-body { min-height: 100vh; display: flex; flex-direction: column; }
+.form-body .website-logo { padding: 20px; text-align: center; }
+.form-body .website-logo .logo-size { max-height: 50px; width: auto; }
+.iofrm-layout { flex: 1; display: flex; flex-wrap: wrap; }
+.iofrm-layout .img-holder { flex: 1; min-width: 280px; min-height: 50vh; position: relative; display: flex; align-items: center; justify-content: center; padding: 40px; }
+.iofrm-layout .img-holder .bg { position: absolute; inset: 0; background: linear-gradient(135deg, #0d6efd 0%, #0a58ca 100%); opacity: 0.95; }
+.iofrm-layout .img-holder .info-holder { position: relative; z-index: 1; color: #fff; text-align: center; max-width: 400px; }
+.iofrm-layout .img-holder .info-holder h3 { font-size: 1.75rem; font-weight: 600; margin-bottom: 1rem; }
+.iofrm-layout .img-holder .info-holder p { opacity: 0.9; margin-bottom: 1.5rem; }
+.iofrm-layout .img-holder .info-holder img { max-width: 100%; height: auto; }
+.iofrm-layout .form-holder { flex: 1; min-width: 280px; display: flex; align-items: center; justify-content: center; padding: 40px; background: #f8f9fa; }
+.iofrm-layout .form-content { width: 100%; max-width: 400px; }
+.iofrm-layout .form-items { background: #fff; padding: 2rem; border-radius: 8px; box-shadow: 0 4px 20px rgba(0,0,0,0.08); }
+.iofrm-layout .website-logo-inside { text-align: center; margin-bottom: 1.5rem; }
+.iofrm-layout .website-logo-inside .logo-size { max-height: 40px; width: auto; }
+.iofrm-layout .page-links { text-align: center; margin-bottom: 1.5rem; }
+.iofrm-layout .page-links a { margin: 0 0.5rem; text-decoration: none; color: #6c757d; font-weight: 500; }
+.iofrm-layout .page-links a.active { color: #0d6efd; }
+.iofrm-layout .form-control { height: 48px; border-radius: 6px; margin-bottom: 1rem; }
+.iofrm-layout .form-button { margin-top: 1rem; margin-bottom: 1rem; }
+.iofrm-layout .form-button .ibtn { width: 100%; height: 48px; border-radius: 6px; font-weight: 600; }
+.iofrm-layout .form-button a { font-size: 0.875rem; color: #0d6efd; text-decoration: none; }
+.iofrm-layout .other-links { text-align: center; font-size: 0.875rem; color: #6c757d; }
+.iofrm-layout .other-links a { margin: 0 0.25rem; color: #0d6efd; text-decoration: none; }
+
+/* Sign-up student: wider card + scrollable form */
+.iofrm-layout .form-content.auth-signup { max-width: 540px; }
+.iofrm-layout .form-content.auth-signup .form-items { max-height: calc(100vh - 2rem); overflow-y: auto; }
+.iofrm-layout .form-content.auth-signup .form-control,
+.iofrm-layout .form-content.auth-signup .form-select { margin-bottom: 0; }
+.iofrm-layout .form-content.auth-signup .row.g-2 .form-control,
+.iofrm-layout .form-content.auth-signup .row.g-2 .form-select { margin-bottom: 0.5rem; }
+.iofrm-layout .form-content.auth-signup textarea.form-control { height: auto; min-height: 60px; }
+.iofrm-layout .form-content.auth-signup input[type="file"].form-control { height: auto; padding: 0.35rem 0.5rem; }
+.iofrm-layout .form-select { height: 48px; border-radius: 6px; }

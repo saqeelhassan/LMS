@@ -1,0 +1,251 @@
+// 
+// dark-mode.scss
+// Theme Component
+// Dark mode related CSS
+
+[data-bs-theme="dark"] {
+
+  //Dark mode styles
+    --bs-light: #2a2c31;
+    --bs-dark: #0f0f10;
+    --bs-dark-rgb: 15, 15, 16;
+    --bs-gray-200: #464950;
+    --bs-gray-300: #3e3e40;
+    --bs-gray-400: #a1a1a8;
+    --bs-gray-500: #bfc0c9;
+    --bs-gray-600: #c5c6cc;
+    --bs-gray-700: #f3f1f1;
+    --bs-gray-800: #f7f5f5;
+    --bs-gray-900: #fff;
+    --bs-body-bg: #222529;
+    --bs-body-bg-rgb: #222529;
+    --bs-body-color: #a1a1a8;
+    --bs-body-color-rgb: rgba(176, 176, 184);
+    --bs-border-color: rgba(255, 255, 255, 0.07);
+    --bs-mode:#1b1e21;
+    --bs-heading-color: var(--bs-gray-900);
+
+    .navbar {
+    --bs-navbar-color: var(--#{$prefix}gray-600);
+    --bs-navbar-disabled-color: var(--#{$prefix}gray-400);
+    }
+    .navbar-dark {
+      --bs-navbar-color: var(--#{$prefix}gray-900);
+    }
+    .nav{
+      --bs-nav-link-color: var(--#{$prefix}gray-600);
+    }
+    .nav-category {
+      border-bottom: solid 1px var(--#{$prefix}light);
+    }
+    .dropdown-menu {
+      --bs-dropdown-bg: var(--#{$prefix}dark);
+      --bs-dropdown-link-disabled-color: var(--#{$prefix}gray-200);
+      box-shadow:none;
+      --bs-dropdown-divider-bg:var(--#{$prefix}body-bg);
+    }
+    .dropdown-menu:before{
+      background-color: var(--#{$prefix}dark) !important;
+      box-shadow: none !important;
+    }
+    .card{
+      --bs-card-cap-bg: var(--#{$prefix}mode);
+      --bs-card-bg: var(--#{$prefix}mode);
+    }
+    .btn-white{
+      &.active, &:active, &:focus, &:hover {
+        background: var(--#{$prefix}gray-800);
+      }
+    }
+    .alert-light{
+      --bs-alert-bg: var(--#{$prefix}gray-600);
+      --bs-alert-border-color: var(--#{$prefix}gray-600);
+    }
+    .btn-dark {
+      --bs-btn-bg: var(--#{$prefix}dark) !important;
+      --bs-btn-border-color: var(--#{$prefix}dark) !important;
+    }
+    hr{
+      color: var(--#{$prefix}gray-300);
+    }
+    .modal {
+      --bs-modal-bg: var(--#{$prefix}body-bg);
+      --bs-modal-border-color: var(--#{$prefix}border-color-translucent);
+      --bs-modal-footer-border-color: var(--#{$prefix}border-color);
+    }
+    .table-light {
+      --bs-table-bg: var(--#{$prefix}light);
+      --bs-table-color: var(--#{$prefix}gray-900);
+    }
+    .offcanvas, .offcanvas-xxl, .offcanvas-xl, .offcanvas-lg, .offcanvas-md, .offcanvas-sm {
+      --bs-offcanvas-bg: var(--#{$prefix}body-bg);
+    }
+    .fill-primary{
+      fill: var(--#{$prefix}primary) !important;
+    }
+    .fill-dark{
+      fill: var(--#{$prefix}dark) !important;
+    }
+    .text-dark{
+      color: var(--#{$prefix}dark) !important;
+    }
+    .bg-light{
+      background-color: var(--#{$prefix}light) !important;
+    }
+    .border-light{
+      border-color: var(--#{$prefix}light) !important
+    }
+    .bg-body{
+      background-color: var(--#{$prefix}body-bg) !important;
+    }
+    .shadow, .shadow-lg, .shadow-sm{
+      box-shadow: none !important;
+    }
+    .navbar-nav .dropdown .dropdown-submenu:hover>.dropdown-menu {
+      box-shadow: none;
+    }
+    .btn-close {
+      filter: invert(1) grayscale(100%) brightness(300%);
+    }
+    .accordion.accordion-shadow .accordion-button{
+      box-shadow: none;
+      border: 1px solid var(--#{$prefix}gray-200);
+    }
+    .top-bar{
+      box-shadow: none;
+    }
+    .table {
+      --bs-table-hover-bg: var(--#{$prefix}light);
+    }
+    .choices  {
+      .choices__list--dropdown{
+        background: var(--#{$prefix}dark);
+      }
+      &[data-type*=select-one] .choices__input{
+        background: var(--#{$prefix}dark);
+      }
+   }
+
+  // ----- LMS: Light sidebars (Super Admin / Admin / Instructor / Student) in dark mode -----
+  // Force dark background (override .bg-white on sidebar nav and content)
+  .sidebar.sidebar-light,
+  .sidebar.sidebar-light.bg-white,
+  .sidebar.sidebar-light .sidebar-content,
+  .sidebar.sidebar-light .sidebar-content.bg-white,
+  .sidebar.sidebar-light .offcanvas-body,
+  .sidebar.sidebar-light .offcanvas-body.bg-white {
+    background-color: var(--#{$prefix}body-bg) !important;
+    border-right-color: var(--#{$prefix}border-color) !important;
+  }
+  .navbar.sidebar.sidebar-light.bg-white {
+    background-color: var(--#{$prefix}body-bg) !important;
+  }
+  .sidebar.sidebar-light .bg-white {
+    background-color: var(--#{$prefix}body-bg) !important;
+  }
+  .sidebar.sidebar-light .sidebar-content .navbar-nav .nav-link,
+  .sidebar.sidebar-light.navbar-light .navbar-nav .nav-link,
+  .sidebar.sidebar-light .nav.flex-column .nav-link {
+    color: var(--#{$prefix}gray-600) !important;
+    &:hover {
+      color: #facc15 !important;
+      background-color: rgba(250, 204, 21, 0.2) !important;
+      i { color: #facc15 !important; }
+    }
+    &.active {
+      color: #facc15 !important;
+      background-color: rgba(250, 204, 21, 0.15) !important;
+      border-left-color: #facc15 !important;
+      i { color: #facc15 !important; }
+    }
+  }
+  .sidebar.sidebar-light .sidebar-content .navbar-nav > .nav-item > .nav-link[data-bs-toggle=collapse][aria-expanded=true] {
+    color: var(--#{$prefix}gray-700) !important;
+    background-color: rgba(255, 255, 255, 0.06) !important;
+    &:hover {
+      color: #facc15 !important;
+      background-color: rgba(250, 204, 21, 0.2) !important;
+      i { color: #facc15 !important; }
+    }
+  }
+  .sidebar.sidebar-light .sidebar-content .nav-item [data-bs-toggle=collapse][aria-expanded=true]::before,
+  .sidebar.sidebar-light .sidebar-content .nav-item [data-bs-toggle=collapse][aria-expanded=true]::after {
+    background: var(--#{$prefix}gray-500) !important;
+  }
+  .sidebar.sidebar-light .sidebar-content .nav-item > .nav-link[data-bs-toggle=collapse]:hover::before,
+  .sidebar.sidebar-light .sidebar-content .nav-item > .nav-link[data-bs-toggle=collapse]:hover::after {
+    background: #facc15 !important;
+  }
+  .sidebar.sidebar-light .nav-link.text-secondary {
+    color: var(--#{$prefix}gray-500) !important;
+  }
+  .sidebar.sidebar-light .nav-link.text-secondary:hover {
+    color: #facc15 !important;
+  }
+  .sidebar-menu-light {
+    background-color: var(--#{$prefix}body-bg) !important;
+    border-color: var(--#{$prefix}border-color) !important;
+  }
+  .list-group-item-light-sidebar {
+    color: var(--#{$prefix}gray-600) !important;
+    &:hover {
+      color: var(--#{$prefix}primary) !important;
+      background-color: rgba(var(--#{$prefix}primary-rgb), 0.2) !important;
+    }
+    &.active {
+      color: #facc15 !important;
+      background-color: rgba(250, 204, 21, 0.15) !important;
+      border-left-color: #facc15 !important;
+      i { color: #facc15 !important; }
+    }
+  }
+  .sidebar-dashboard-link.active {
+    color: #facc15 !important;
+    border-left-color: #facc15 !important;
+    i { color: #facc15 !important; }
+  }
+  .sidebar-dashboard-link:hover,
+  .sidebar-dashboard-link.active:hover {
+    color: #facc15 !important;
+    background-color: rgba(250, 204, 21, 0.25) !important;
+    border-left-color: #facc15 !important;
+    i { color: #facc15 !important; }
+  }
+
+  // Top bar (admin topbar) in dark mode
+  .top-bar {
+    background-color: var(--#{$prefix}body-bg) !important;
+    border-color: var(--#{$prefix}border-color);
+  }
+
+  // Offcanvas (e.g. Instructor/Student sidebar) with bg-white → dark
+  .offcanvas .offcanvas-header.bg-white,
+  .offcanvas .offcanvas-body.bg-white {
+    background-color: var(--#{$prefix}body-bg) !important;
+  }
+  .offcanvas .offcanvas-header.bg-white {
+    border-bottom-color: var(--#{$prefix}border-color) !important;
+  }
+  }
+
+  // Dark mode switch style
+  .dark-mode-switch .btn.active{
+    background-color: var(--#{$prefix}body-bg) !important;
+    border-color: var(--#{$prefix}body-bg) !important;
+    color: $headings-color;
+    box-shadow: $box-shadow;
+  }
+
+// Dark mode item hide and show
+.dark-mode-item{
+  display: none !important;
+}
+
+[data-bs-theme="dark"]{
+  .dark-mode-item{
+    display: inline-block !important;
+  }
+  .light-mode-item{
+    display: none !important;
+  }
+}

@@ -1,0 +1,10 @@
+/* Switch nav logo when hamburger is active (sidebar collapsed). */
+.nav-header .brand-logo .logo-hamburger-active {
+    display: none;
+}
+#main-wrapper.menu-toggle .nav-header .brand-logo .logo-default {
+    display: none;
+}
+#main-wrapper.menu-toggle .nav-header .brand-logo .logo-hamburger-active {
+    display: inline-block;
+}
